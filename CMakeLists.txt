@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 4.0)
-project(qt_audio_test)
+project(audio_play_test)
 
 set(CMAKE_CXX_STANDARD 23)
 
@@ -13,7 +13,7 @@ if (CMAKE_BUILD_TYPE STREQUAL "Debug")
     add_compile_definitions(SOURCE_DIR="${CMAKE_SOURCE_DIR}")
 endif ()
 
-set(EXE_NAME "QtAudioTest")
+set(EXE_NAME "AudioPlayTest")
 
 add_executable(${EXE_NAME} main.cpp
         Decoder.cpp
