@@ -1,0 +1,6 @@
+[submodule "miniaudio"]
+	path = miniaudio
+	url = https://github.com/mackron/miniaudio.git
+[submodule "logger"]
+	path = logger
+	url = https://github.com/neapu/logger.git

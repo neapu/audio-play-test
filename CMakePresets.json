@@ -1,0 +1,33 @@
+{
+  "version": 4,
+  "configurePresets": [{
+    "name": "Win64-MSVC-Debug",
+    "displayName": "Win64 MSVC Debug",
+    "generator": "Visual Studio 17 2022",
+    "binaryDir": "${sourceDir}/build/${presetName}",
+    "cacheVariables": {
+      "CMAKE_BUILD_TYPE": "Debug",
+      "FFMPEG_DIR": "$env{FFMPEG_DIR}"
+    }
+  }, {
+    "name": "Win64-MSVC-Release",
+    "displayName": "Win64 MSVC Release",
+    "generator": "Visual Studio 17 2022",
+    "binaryDir": "${sourceDir}/build/${presetName}",
+    "cacheVariables": {
+      "CMAKE_BUILD_TYPE": "Release",
+      "FFMPEG_DIR": "$env{FFMPEG_DIR}"
+    }
+  }],
+  "buildPresets": [{
+    "name": "Win64-MSVC-Debug",
+    "configurePreset": "Win64-MSVC-Debug",
+    "displayName": "Build Win64 MSVC Debug",
+    "configuration": "Debug"
+  }, {
+    "name": "Win64-MSVC-Release",
+    "configurePreset": "Win64-MSVC-Release",
+    "displayName": "Build Win64 MSVC Release",
+    "configuration": "Release"
+  }]
+}
