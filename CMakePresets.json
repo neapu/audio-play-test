@@ -18,6 +18,28 @@
       "CMAKE_BUILD_TYPE": "Release",
       "FFMPEG_DIR": "$env{FFMPEG_DIR}"
     }
+  }, {
+    "name": "Linux-GCC-Debug",
+    "displayName": "Linux GCC Debug",
+    "generator": "Ninja",
+    "binaryDir": "${sourceDir}/build/${presetName}",
+    "cacheVariables": {
+      "CMAKE_BUILD_TYPE": "Debug",
+      "CMAKE_C_COMPILER": "gcc",
+      "CMAKE_CXX_COMPILER": "g++",
+      "FFMPEG_DIR": "$env{FFMPEG_DIR}"
+    }
+  }, {
+    "name": "Linux-GCC-Release",
+    "displayName": "Linux GCC Release",
+    "generator": "Ninja",
+    "binaryDir": "${sourceDir}/build/${presetName}",
+    "cacheVariables": {
+      "CMAKE_BUILD_TYPE": "Release",
+      "CMAKE_C_COMPILER": "gcc",
+      "CMAKE_CXX_COMPILER": "g++",
+      "FFMPEG_DIR": "$env{FFMPEG_DIR}"
+    }
   }],
   "buildPresets": [{
     "name": "Win64-MSVC-Debug",
@@ -28,6 +50,16 @@
     "name": "Win64-MSVC-Release",
     "configurePreset": "Win64-MSVC-Release",
     "displayName": "Build Win64 MSVC Release",
+    "configuration": "Release"
+  }, {
+    "name": "Linux-GCC-Debug",
+    "configurePreset": "Linux-GCC-Debug",
+    "displayName": "Build Linux GCC Debug",
+    "configuration": "Debug"
+  }, {
+    "name": "Linux-GCC-Release",
+    "configurePreset": "Linux-GCC-Release",
+    "displayName": "Build Linux GCC Release",
     "configuration": "Release"
   }]
 }
